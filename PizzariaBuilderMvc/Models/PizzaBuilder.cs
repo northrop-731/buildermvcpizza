@@ -36,7 +36,7 @@ namespace PizzariaBuilderMvc.Models
         public ConstrutorDePizza DefinirTamanho(string tamanho)
         {
             _pizza.Tamanho = tamanho;
-            return this; // <-- Aponte aqui na apresentação: "É isso que permite o encadeamento!"
+            return this;  // Retorna a própria instância para permitir o encadeamento
         }
 
         public ConstrutorDePizza DefinirMassa(string massa)
@@ -69,9 +69,10 @@ namespace PizzariaBuilderMvc.Models
     }
 
 
-    // "Por fim, temos o PizzaioloDiretor. Ele não é obrigatório no padrão,
-    //  mas serve para guardar receitas prontas do cardápio. Assim, o Controller
-    //  não precisa repetir os mesmos passos toda vez que alguém pedir uma Calabresa."
+
+    // Por fim, temos o PizzaioloDiretor. Ele não é obrigatório no padrão,
+    // mas serve para guardar receitas prontas do cardápio. Assim, o Controller
+    // não precisa repetir os mesmos passos toda vez que alguém pedir uma Calabresa.
 
     public class PizzaioloDiretor
     {
