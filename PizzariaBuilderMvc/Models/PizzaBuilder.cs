@@ -1,9 +1,9 @@
 namespace PizzariaBuilderMvc.Models
 {
-    // Aqui temos a classe 'Pizza', que é o nosso Produto final.
+    // Aqui temos a classe 'Pizza', que é o nosso produto final.
     //  Reparem que ela tem várias propriedades opcionais. Sem o padrão Builder,
-    //  teríamos que criar vários construtores gigantes ou passar vários 'null'
-    //  e 'false' toda vez que fôssemos instanciar uma pizza simples.
+    //  teríamos que criar vários construtores gigantes ou passar vários null
+    //  e false toda vez que fôssemos instanciar uma pizza simples.
     public class Pizza
     {
         public string Tamanho { get; set; } = "Média";
@@ -72,7 +72,7 @@ namespace PizzariaBuilderMvc.Models
 
     // Por fim, temos o PizzaioloDiretor. Ele não é obrigatório no padrão,
     // mas serve para guardar receitas prontas do cardápio. Assim, o Controller
-    // não precisa repetir os mesmos passos toda vez que alguém pedir uma Calabresa.
+    // não precisa repetir os mesmos passos toda vez que alguém pedir uma pizza de calabresa.
 
     public class PizzaioloDiretor
     {

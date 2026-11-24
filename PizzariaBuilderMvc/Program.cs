@@ -11,7 +11,7 @@ if (args.Contains("--terminal"))
     return; // Encerra após o menu do terminal para não subir o servidor web
 }
 
-// Fluxo padrão do ASP.NET Core MVC (também usa o padrão Builder!)
+// Fluxo padrão do ASP.NET Core MVC (também usa o padrão Builder)
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
@@ -56,15 +56,15 @@ static void ExecutarModoTerminalInterativo()
         if (!string.IsNullOrWhiteSpace(tamanho))
         {
             construtor.DefinirTamanho(tamanho);
-            Console.WriteLine($"   -> Chamado: construtor.DefinirTamanho(\"{tamanho}\")");
+            Console.WriteLine($"Chamado: construtor.DefinirTamanho(\"{tamanho}\")");
         }
 
-        Console.Write("\n2º Passo - Qual o tipo de massa? (Tradicional / Fina / Pan): ");
+        Console.Write("\n2º Passo - Qual o tipo de massa? (Tradicional/Fina): ");
         var massa = Console.ReadLine();
         if (!string.IsNullOrWhiteSpace(massa))
         {
             construtor.DefinirMassa(massa);
-            Console.WriteLine($"   -> Chamado: construtor.DefinirMassa(\"{massa}\")");
+            Console.WriteLine($"Chamado: construtor.DefinirMassa(\"{massa}\")");
         }
 
         Console.Write("\n3º Passo - Deseja borda recheada? (s/n): ");
@@ -72,7 +72,7 @@ static void ExecutarModoTerminalInterativo()
         if (borda == "s")
         {
             construtor.ComBordaRecheada();
-            Console.WriteLine("   -> Chamado: construtor.ComBordaRecheada()");
+            Console.WriteLine("Chamado: construtor.ComBordaRecheada()");
         }
 
         Console.WriteLine("\n4º Passo - Digite os ingredientes (pressione ENTER vazio para finalizar):");
@@ -83,7 +83,7 @@ static void ExecutarModoTerminalInterativo()
             if (string.IsNullOrWhiteSpace(ingrediente)) break;
 
             construtor.AdicionarIngrediente(ingrediente);
-            Console.WriteLine($"   -> Chamado: construtor.AdicionarIngrediente(\"{ingrediente}\")");
+            Console.WriteLine($"Chamado: construtor.AdicionarIngrediente(\"{ingrediente}\")");
         }
 
         // Passo final: entrega o produto pronto
